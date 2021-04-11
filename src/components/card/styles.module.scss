@@ -1,0 +1,38 @@
+// VARIABLES:
+@import "../../styles/variables.scss";
+
+.root {
+  flex: 1;
+  background-color: white;
+  border-radius: 20px 20px 10px 10px;
+}
+.container {
+  position: relative;
+  // height: 100%;
+}
+.cardTop {
+  background-image: url("../../assets/images/card-top.jpg");
+  background-size: cover;
+  background-position: 20% 50%;
+  border-radius: 20px 20px 0px 0px;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.name {
+  display: inline-block;
+  color: white;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: normal;
+}
+.content {
+  padding: 0px 20px;
+  font-weight: normal;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.cardBottom {
+  padding: 20px 20px;
+}

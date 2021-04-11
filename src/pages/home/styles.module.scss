@@ -1,0 +1,65 @@
+// VARIABLES:
+@import "../../styles/variables.scss";
+
+.root {
+  min-height: 100vh;
+  background-image: linear-gradient(120deg, #f4f4f4, #c8c8c8);
+}
+.pageContainer {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px;
+}
+.cardContainer {
+  display: flex;
+  align-items: stretch;
+}
+.gridHome {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: space-around;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 20px 40px 40px 40px;
+  @media (max-width: $medium-witdh) {
+    grid-template-columns: 50% 50%;
+  }
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 100%;
+  }
+}
+.progressCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.pagination {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leftArrow,
+.rightArrow {
+  color: rgb(60, 60, 60);
+  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+    color: #000000;
+  }
+}
+.leftArrow {
+  margin-right: 10px;
+}
+.rightArrow {
+  margin-left: 10px;
+}
+.inactiveArrow {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.4;
+}

@@ -1,0 +1,122 @@
+// VARIABLES:
+@import "../../styles/variables.scss";
+
+// ANIMATIONS:
+@import "../../styles/animations.scss";
+
+.root {
+  position: fixed;
+  overflow-y: scroll;
+  max-height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  @include fadeIn();
+}
+.container {
+  margin-bottom: 20px;
+  max-width: $max-width-md;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 70px 120px;
+  @media (max-width: $small-width) {
+    padding: 70px 40px;
+  }
+}
+.top {
+  background-image: url("../../assets/images/modal-top.jpg");
+  background-size: cover;
+  background-position: 20% 50%;
+  border-radius: 20px 20px 0px 0px;
+  padding: 90px 20px;
+  @media (max-width: $mobile-width) {
+    padding: 60px 20px;
+  }
+}
+.cardTop {
+  display: flex;
+  align-items: center;
+  @media (max-width: $mobile-width) {
+    font-size: 25px;
+  }
+}
+.avatar {
+  margin-left: 20px;
+  height: 80px !important;
+  width: 80px !important;
+  @media (max-width: $mobile-width) {
+    height: 60px !important;
+    width: 60px !important;
+  }
+}
+.fontName {
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
+  font-weight: normal;
+  @media (max-width: $mobile-width) {
+    font-size: 25px;
+  }
+}
+.accordion {
+  border-radius: 0 !important;
+}
+.accordionCalls {
+  border-radius: 0 !important;
+  background-color: $red-dark !important;
+}
+.acconrdionSummary {
+  min-height: 70px !important;
+  @media (max-width: $mobile-width) {
+    min-height: 60px !important;
+  }
+}
+.closeIcon {
+  position: absolute;
+  right: 80px;
+  top: 15px;
+  color: #3b3b3b;
+  &:hover {
+    cursor: pointer;
+    color: #000000;
+  }
+  @media (max-width: $small-width) {
+    right: 40px;
+  }
+}
+.titleAccounts,
+.titleCalls {
+  font-size: 18px;
+  font-weight: normal !important;
+  color: $red-dark;
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+  }
+}
+.titleCalls {
+  color: white;
+}
+.accordionDetails {
+  padding: 0px 20px 8px 20px !important;
+  margin: 0;
+}
+.accordionDetailsFont {
+  font-size: 8px;
+  font-weight: normal !important;
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+  }
+}
+.accordionCalls {
+  color: black;
+}
+.expandMoreIcon > * {
+  color: white !important;
+}
+.sutTitle {
+  margin-right: 10px;
+  font-weight: bold;
+}
