@@ -2,4 +2,4 @@
 export { setMessage, pageUpdate } from "./global";
 
 // *** SUBSCRIBERS ***
-export { storeData } from "./subscribers";
+export { storeAllData } from "./subscribers";

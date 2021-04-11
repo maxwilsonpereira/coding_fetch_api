@@ -9,25 +9,22 @@ import HomePage from "./pages/home";
 
 import { SubscriberModel } from "./models/subscriber-model";
 interface Props {
-  onStoreData: (data: SubscriberModel[]) => void;
+  onStoreAllData: (data: SubscriberModel[]) => void;
   onSetMessage: (message: string) => void;
-  pageCurrent: number;
 }
 
-const App: React.FC<Props> = ({ onStoreData, onSetMessage, pageCurrent }) => {
+const App: React.FC<Props> = ({ onStoreAllData, onSetMessage }) => {
   useEffect(() => {
     axios
-      .get(
-        `https://604868d1b801a40017ccdac6.mockapi.io/api/v1/subscriber?page=${pageCurrent}&limit=7`
-      )
+      .get(`https://604868d1b801a40017ccdac6.mockapi.io/api/v1/subscriber`)
       .then(({ data }) => {
-        onStoreData(data);
+        onStoreAllData(data);
         onSetMessage("Data fetched successfully!");
       })
       .catch((err) => {
         onSetMessage("Connection error. Please try again later.");
       });
-  }, [pageCurrent]);
+  }, []);
 
   return (
     <BrowserRouter>
@@ -54,8 +51,8 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    onStoreData: (dataFetched: SubscriberModel[]) =>
-      dispatch(actionsTypes.storeData(dataFetched)),
+    onStoreAllData: (dataFetched: SubscriberModel[]) =>
+      dispatch(actionsTypes.storeAllData(dataFetched)),
     onSetMessage: (message: string) =>
       dispatch(actionsTypes.setMessage(message)),
   };
