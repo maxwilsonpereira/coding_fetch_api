@@ -39,24 +39,29 @@ const HomePage: React.FC<Props> = ({
     <div className={classes.root}>
       {dataIsLoaded ? (
         <>
-          <PageTitle />
-          <div className={classes.pageContainer}>
-            <div className={classes.pagination}>
-              <PaginationComponent
-                subscribersPerPage={subscribersPerPage}
-                totalSubscriber={subscribers.length}
-                changePageHanlder={changePageHanlder}
-              />
-            </div>
-            <div className={classes.gridHome}>
-              {currentSubscribers.map((item) => (
-                <div key={item.id} className={classes.cardContainer}>
-                  <Card subscriber={item} />
-                </div>
-              ))}
+          <div>
+            <PageTitle />
+            <div className={classes.pageContainer}>
+              <div className={classes.pagination}>
+                <PaginationComponent
+                  subscribersPerPage={subscribersPerPage}
+                  totalSubscriber={subscribers.length}
+                  changePageHanlder={changePageHanlder}
+                />
+              </div>
+              <div className={classes.gridHome}>
+                {currentSubscribers.map((item) => (
+                  <div key={item.id} className={classes.cardContainer}>
+                    <Card subscriber={item} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <Footer />
+
+          <div className={classes.footerToBottom}>
+            <Footer />
+          </div>
         </>
       ) : (
         <div className={classes.progressCircle}>

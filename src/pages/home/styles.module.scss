@@ -4,6 +4,12 @@
 .root {
   min-height: 100vh;
   background-image: linear-gradient(120deg, #f4f4f4, #c8c8c8);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.footerToBottom {
+  margin-top: auto;
 }
 .pageContainer {
   max-width: $max-width;

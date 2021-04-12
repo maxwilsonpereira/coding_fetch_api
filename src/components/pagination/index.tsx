@@ -18,18 +18,18 @@ const PaginationComponent: React.FC<Props> = ({
   }
 
   return (
-    <>
-      {pageNumbers.map((number) => (
+    <div className={classes.root}>
+      {pageNumbers.map((number, index) => (
         <a
           key={number}
           href={`#${number}`}
           onClick={() => changePageHanlder(number)}
-          className={classes.numbers}
+          id={`page${number}`}
         >
           {number}
         </a>
       ))}
-    </>
+    </div>
   );
 };
 
