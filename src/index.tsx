@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./global.css";
 import App from "./App";
-// Redux:
 import reportWebVitals from "./reportWebVitals";
+// ********** REDUX ********** //
 import { createStore, combineReducers, compose } from "redux";
 import { Provider } from "react-redux";
 import globalReducer from "./store/reducers/global";
@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
   subscribers: subscribersReducer,
 });
 
-// For Google Chrome Extension:
+// composeEnhancers to have REDUX on the Google Chrome Extension:
 declare global {
   interface Window {
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;

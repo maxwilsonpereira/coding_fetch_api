@@ -1,5 +1,5 @@
 // *** GLOBAL ***
-export { setMessage, pageUpdate } from "./global";
+export { setMessage, pageUpdate, dataIsLoaded } from "./global";
 
 // *** SUBSCRIBERS ***
-export { storeAllData } from "./subscribers";
+export { storeData } from "./subscribers";

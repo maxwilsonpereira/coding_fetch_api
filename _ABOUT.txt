@@ -1,0 +1,56 @@
+This was the Code Challange for the Cyan Security job:
+https://www.cyansecurity.com/
+
+Code Challange:
+https://github.com/i-new/hiring_exercise-frontend_developer
+
+
+FROM EVA KNOTZ
+http://flux-c.at/
+
+SPECS:
+Unser Kunde, ein führender österreichischer, eigentümergeführter IT-Infrastruktur- und
+Rechenzentrumsdienstleister, bietet seinen Kunden seit vielen Jahren erfolgreich ein durchgängiges
+Leistungsportfolio für individuelle Lösungen.
+
+Aktuell suchen wir zur Verstärkung des Teams einen
+Full Stack Developer (w/m/d)
+
+Vollzeit oder Teilzeit, Standort Wien oder Klagenfurt
+
+Deine Herausforderung:
+• Planung und Entwicklung von innovativen, plattformübergreifenden Softwarelösungen
+• Ausarbeitung und Entwicklung von Mockups, Prototypen und Tests
+• Weiterentwicklung und Optimierung von bestehenden Anwendungen
+• Aktive Beteiligung an der Gestaltung von Softwaredesign & Architektur
+• Spezifikation und Abstimmung von Anforderungen mit entsprechenden Stakeholdern
+• Enge Zusammenarbeit mit anderen Abteilungen, z.B. Projektmanagement oder Operations
+
+Das bringst du mit:
+• Erfahrung in der Backend-Entwicklung in zumindest einer der folgenden Sprachen bzw.
+Technologien: Scala, Java, PHP, Go, C#
+• Erfahrung in der Frontend-Entwicklung in zumindest einer der folgenden Sprachen bzw.
+Technologien: JavaScript, Typescript, React (Native), Vue.js
+• Kenntnisse im Umgang mit SQL (PostgreSQL, MariaDB) und/oder noSQL (Elasticsearch) Datenbanken
+• Gefühl für modernes Design
+• Grundkenntnisse im Umgang mit Linux, Git und idealerweise Docker und Ansible
+• Disziplin strukturierten Code zu schreiben, diesen zu testen und sauber zu dokumentieren
+• Interesse an modernen Technologien und Bereitschaft sich neue Kenntnisse anzueignen
+• Innovative Denkweise und aktives Einbringen von Ideen
+• Kundenorientierte und kommunikative Persönlichkeit mit Teamgeist
+• Abgeschlossene IT- Ausbildung (HTL, Universität, FH oder Ähnliches) oder entsprechende Erfahrung
+
+Das wird dir geboten:
+• Innovatives und abwechslungsreiches Aufgabengebiet mit hoher Eigenverantwortung
+• Junges, dynamisches Team mit umfangreichem Knowhow
+• Agile Software-Entwicklungs-Prozesse
+• Flexible Arbeitszeiten / Gleitzeitregelung & Möglichkeit für Home-Office-Tage
+• Gezielte Fortbildung und hervorragende Entwicklungsmöglichkeiten
+• Benefits wie moderne Arbeitsplatzinfrastruktur, Essenszuschüsse, gute Erreichbarkeit mit öffentlichen
+Verkehrsmitteln (U-Bahn-Nähe) u.v.m.
+• Geboten wird eine attraktives, deutlich über dem KV liegendes Gehalt abhängig von Deiner Qualifikation
+und Erfahrung
+
+Ich freue mich auf deine Kontaktaufnahme!
+
+Eva Knotz, Flux Consulting GmbH, eva.knotz@flux-consulting.at oder 06642013487

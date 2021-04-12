@@ -23,7 +23,7 @@
   margin-right: auto;
   padding: 70px 120px;
   @media (max-width: $small-width) {
-    padding: 70px 40px;
+    padding: 70px 30px;
   }
 }
 .top {
@@ -111,7 +111,7 @@
   }
 }
 .accordionCalls {
-  color: black;
+  color: white !important;
 }
 .expandMoreIcon > * {
   color: white !important;

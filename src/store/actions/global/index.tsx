@@ -5,7 +5,11 @@ export const setMessage = (message: string) => ({
   payload: message,
 });
 
-export const pageUpdate = (pageCurrent: number) => ({
+export const pageUpdate = (direction: number) => ({
   type: actionsTypes.PAGE_UPDATE,
-  payload: pageCurrent,
+  payload: direction,
+});
+
+export const dataIsLoaded = () => ({
+  type: actionsTypes.DATA_IS_LOADED,
 });

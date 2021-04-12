@@ -17,8 +17,7 @@ const initialState = {
 
 const reducer = (state = initialState, action: any) => {
   switch (action.type) {
-    case actionsTypes.STORE_ALL_DATA:
-      console.log("################ action.payload", action.payload);
+    case actionsTypes.STORE_DATA:
       let updatedSubscribers = { ...state, subscribers: action.payload };
       return updatedSubscribers;
 

@@ -1,6 +1,6 @@
 import * as actionsTypes from "../actionsTypes";
 
-export const storeAllData = (data: any) => ({
-  type: actionsTypes.STORE_ALL_DATA,
+export const storeData = (data: any) => ({
+  type: actionsTypes.STORE_DATA,
   payload: data,
 });

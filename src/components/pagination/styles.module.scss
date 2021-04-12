@@ -1,0 +1,22 @@
+// VARIABLES:
+@import "../../styles/variables.scss";
+
+.numbers {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  background: rgb(130, 130, 130);
+  font-size: 18px;
+  margin: 0 6px;
+  cursor: pointer;
+  text-decoration: none;
+  @media (max-width: $mobile-width) {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}

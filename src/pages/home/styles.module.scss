@@ -41,29 +41,9 @@
   transform: translate(-50%, -50%);
 }
 .pagination {
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.leftArrow,
-.rightArrow {
-  color: rgb(60, 60, 60);
-  cursor: pointer;
-  &:hover {
-    cursor: pointer;
-    color: #000000;
-  }
-}
-.leftArrow {
-  margin-right: 10px;
-}
-.rightArrow {
-  margin-left: 10px;
-}
-.inactiveArrow {
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.4;
 }
