@@ -4,6 +4,7 @@ const initialState = {
   title: "Cyan Coding Exercise",
   message: "",
   pageCurrent: 1,
+  pageLastVisited: 1,
   dataIsLoaded: false,
 };
 
@@ -13,7 +14,11 @@ const reducer = (state = initialState, action: any) => {
       return { ...state, message: action.payload };
 
     case actionsTypes.PAGE_UPDATE:
-      return { ...state, pageCurrent: action.payload };
+      return {
+        ...state,
+        pageLastVisited: state.pageCurrent,
+        pageCurrent: action.payload,
+      };
 
     case actionsTypes.DATA_IS_LOADED:
       return { ...state, dataIsLoaded: true };

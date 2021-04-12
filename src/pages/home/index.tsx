@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./styles.module.scss";
 import { connect } from "react-redux";
 import * as actionsTypes from "../../store/actions/actionsIndex";
@@ -15,6 +15,7 @@ interface Props {
   subscribers: SubscriberModel[];
   onPageUpdate: (direction: number) => void;
   pageCurrent: number;
+  pageLastVisited: number;
 }
 
 const HomePage: React.FC<Props> = ({
@@ -22,6 +23,7 @@ const HomePage: React.FC<Props> = ({
   subscribers,
   onPageUpdate,
   pageCurrent,
+  pageLastVisited,
 }) => {
   const subscribersPerPage = 7;
   const indexOfLastSubscriber = pageCurrent * subscribersPerPage;
@@ -30,6 +32,14 @@ const HomePage: React.FC<Props> = ({
     indexOfFirstSubscriber,
     indexOfLastSubscriber
   );
+
+  useEffect(() => {
+    const element = document.getElementById(`page${pageLastVisited}`);
+    if (element) {
+      document.getElementById(`page${pageLastVisited}`)!.style.color = "white";
+      document.getElementById(`page${pageCurrent}`)!.style.color = "darkred";
+    }
+  }, [pageCurrent, pageLastVisited, dataIsLoaded]);
 
   const changePageHanlder = (value: number) => {
     onPageUpdate(value);
@@ -75,8 +85,9 @@ const HomePage: React.FC<Props> = ({
 const mapStateToProps = (state: any) => {
   return {
     subscribers: state.subscribers.subscribers,
-    pageCurrent: state.global.pageCurrent,
     dataIsLoaded: state.global.dataIsLoaded,
+    pageCurrent: state.global.pageCurrent,
+    pageLastVisited: state.global.pageLastVisited,
   };
 };
 
