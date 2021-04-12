@@ -19,7 +19,7 @@ const PaginationComponent: React.FC<Props> = ({
 
   return (
     <div className={classes.root}>
-      {pageNumbers.map((number, index) => (
+      {pageNumbers.map((number) => (
         <a
           key={number}
           href={`#${number}`}
