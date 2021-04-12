@@ -50,6 +50,11 @@ const CardComponent: React.FC<Props> = ({ subscriber }) => {
               variant="outlined"
               color="primary"
               fullWidth
+              className={
+                subscriber.accounts.length >= 1 || subscriber.calls.length >= 1
+                  ? classes.active
+                  : classes.inactive
+              }
             >
               Show more
             </Button>

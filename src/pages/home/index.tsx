@@ -26,7 +26,7 @@ const HomePage: React.FC<Props> = ({
   const subscribersPerPage = 7;
   const indexOfLastSubscriber = pageCurrent * subscribersPerPage;
   const indexOfFirstSubscriber = indexOfLastSubscriber - subscribersPerPage;
-  const currentSubscribers = subscribers.slice(
+  const currentSubscribers: SubscriberModel[] = subscribers.slice(
     indexOfFirstSubscriber,
     indexOfLastSubscriber
   );

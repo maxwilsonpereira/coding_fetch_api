@@ -29,78 +29,82 @@ const ModalComponent: React.FC<Props> = ({ subscriber, closeModal }) => {
             <h2 className={classes.fontName}>{subscriber.name}</h2>
           </div>
         </div>
-        {subscriber.accounts.map((item) => (
-          <div key={item.id}>
-            <Accordion className={classes.accordion}>
-              <AccordionSummary
-                className={classes.acconrdionSummary}
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-              >
-                <h2 className={classes.titleAccounts}>
-                  Account ID Number {item.id}
-                </h2>
-              </AccordionSummary>
-              <AccordionDetails className={classes.accordionDetails}>
-                <p className={classes.sutTitle}>Name:</p>
-                {item.name.replace("_", " ")}
-              </AccordionDetails>
-              <AccordionDetails className={classes.accordionDetails}>
-                <p className={classes.sutTitle}>Created:</p>
-                {item.created.substring(5, 7) +
-                  "/" +
-                  item.created.substring(8, 10) +
-                  "/" +
-                  item.created.substring(0, 4)}{" "}
-                at {item.created.substring(11, 16)}h
-              </AccordionDetails>
-              <AccordionDetails className={classes.accordionDetails}>
-                <p className={classes.sutTitle}>Subscriber ID:</p>
-                {item.subscriberId}
-              </AccordionDetails>
-              <AccordionDetails className={classes.accordionDetails}>
-                <p className={classes.sutTitle}>Balance:</p>
-                {item.balance}
-              </AccordionDetails>
-            </Accordion>
-          </div>
-        ))}
-        {subscriber.calls.map((item) => (
-          <div key={item.id}>
-            <Accordion className={classes.accordionCalls}>
-              <AccordionSummary
-                className={classes.acconrdionSummary}
-                expandIcon={
-                  <ExpandMoreIcon className={classes.expandMoreIcon} />
-                }
-                aria-controls="panel1a-content"
-              >
-                <h2 className={classes.titleCalls}>Call ID Number {item.id}</h2>
-              </AccordionSummary>
-              <AccordionDetails className={classes.accordionDetails}>
-                <p className={classes.sutTitle}>Name:</p>
-                {item.name.replace("_", " ")}
-              </AccordionDetails>
-              <AccordionDetails className={classes.accordionDetails}>
-                <p className={classes.sutTitle}>Created:</p>
-                {item.created.substring(5, 7) +
-                  "/" +
-                  item.created.substring(8, 10) +
-                  "/" +
-                  item.created.substring(0, 4)}{" "}
-                at {item.created.substring(11, 16)}h
-              </AccordionDetails>
-              <AccordionDetails className={classes.accordionDetails}>
-                <p className={classes.sutTitle}>Subscriber ID:</p>
-                {item.subscriberId}
-              </AccordionDetails>
-              <AccordionDetails className={classes.accordionDetails}>
-                <p className={classes.sutTitle}>Balance:</p>
-                {item.balance}
-              </AccordionDetails>
-            </Accordion>
-          </div>
-        ))}
+        {subscriber.accounts.length >= 1 &&
+          subscriber.accounts.map((item) => (
+            <div key={item.id}>
+              <Accordion className={classes.accordion}>
+                <AccordionSummary
+                  className={classes.acconrdionSummary}
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                >
+                  <h2 className={classes.titleAccounts}>
+                    Account ID Number {item.id}
+                  </h2>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <p className={classes.sutTitle}>Name:</p>
+                  {item.name.replace("_", " ")}
+                </AccordionDetails>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <p className={classes.sutTitle}>Created:</p>
+                  {item.created.substring(5, 7) +
+                    "/" +
+                    item.created.substring(8, 10) +
+                    "/" +
+                    item.created.substring(0, 4)}{" "}
+                  at {item.created.substring(11, 16)}h
+                </AccordionDetails>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <p className={classes.sutTitle}>Subscriber ID:</p>
+                  {item.subscriberId}
+                </AccordionDetails>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <p className={classes.sutTitle}>Balance:</p>
+                  {item.balance}
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          ))}
+        {subscriber.calls.length >= 1 &&
+          subscriber.calls.map((item) => (
+            <div key={item.id}>
+              <Accordion className={classes.accordionCalls}>
+                <AccordionSummary
+                  className={classes.acconrdionSummary}
+                  expandIcon={
+                    <ExpandMoreIcon className={classes.expandMoreIcon} />
+                  }
+                  aria-controls="panel1a-content"
+                >
+                  <h2 className={classes.titleCalls}>
+                    Call ID Number {item.id}
+                  </h2>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <p className={classes.sutTitle}>Name:</p>
+                  {item.name.replace("_", " ")}
+                </AccordionDetails>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <p className={classes.sutTitle}>Created:</p>
+                  {item.created.substring(5, 7) +
+                    "/" +
+                    item.created.substring(8, 10) +
+                    "/" +
+                    item.created.substring(0, 4)}{" "}
+                  at {item.created.substring(11, 16)}h
+                </AccordionDetails>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <p className={classes.sutTitle}>Subscriber ID:</p>
+                  {item.subscriberId}
+                </AccordionDetails>
+                <AccordionDetails className={classes.accordionDetails}>
+                  <p className={classes.sutTitle}>Balance:</p>
+                  {item.balance}
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          ))}
       </div>
     </div>
   );
