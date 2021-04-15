@@ -1,4 +1,13 @@
 import * as actionsTypes from "../../actions/actionsTypes";
+import { AnyAction } from "redux";
+
+export interface GlobalState {
+  title: string;
+  message: string;
+  pageCurrent: number;
+  pageLastVisited: number;
+  dataIsLoaded: boolean;
+}
 
 const initialState = {
   title: "Cyan Coding Exercise",
@@ -8,7 +17,7 @@ const initialState = {
   dataIsLoaded: false,
 };
 
-const reducer = (state = initialState, action: any) => {
+const reducer = (state: GlobalState = initialState, action: AnyAction) => {
   switch (action.type) {
     case actionsTypes.SET_MESSAGE:
       return { ...state, message: action.payload };
